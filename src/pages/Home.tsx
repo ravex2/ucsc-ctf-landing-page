@@ -75,11 +75,9 @@ function MatrixRain() {
 }
 
 export default function Home() {
-  const marqueeItems = [
-    { code: "REV", name: "Reverse Engineering" },
+const marqueeItems = [
+    { code: "REV", name: "Ingeniería Inversa" },
     { code: "PWN", name: "Binary Exploitation" },
-    { code: "WEB", name: "Web Exploitation" },
-    { code: "CRY", name: "Cryptography" },
   ];
 
   return (
@@ -107,7 +105,7 @@ export default function Home() {
               </span>
             </div>
             <a
-              href="https://forms.gle/tuFormulario"
+              href="https://forms.gle/bZseVXyHHFAwCMBH7"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-red-600 hover:bg-red-700 text-white rounded-full px-6 py-2 text-sm font-medium transition-colors"
@@ -131,10 +129,10 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mt-6 leading-relaxed">
-            La primera unidad de ciberseguridad competitiva de la UCSC. Formación real, retos reales y competencia internacional.
+            La primera unidad de ciberseguridad competitiva de la UCSC.
           </p>
           <a
-            href="https://forms.gle/tuFormulario"
+            href="https://forms.gle/bZseVXyHHFAwCMBH7"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-full font-medium mt-10 transition-transform hover:scale-105 shadow-[0_0_40px_-10px_rgba(220,38,38,0.5)]"
@@ -148,7 +146,7 @@ export default function Home() {
         <div className="relative z-20 pb-10 pt-16 flex items-center overflow-hidden border-t border-white/5 bg-background/50 backdrop-blur-sm mt-auto">
           <div className="px-8 whitespace-nowrap shrink-0 border-r border-white/10 mr-8">
             <span className="text-foreground/50 text-sm uppercase tracking-widest font-medium">
-              Areas <br /> de ciberseguridad
+              Áreas <br /> 
             </span>
           </div>
 
@@ -167,17 +165,87 @@ export default function Home() {
         </div>
       </section>
 
+
+{/* SECTION 3: La Solución */}
+      <section className="mt-32 max-w-5xl mx-auto px-6">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          El Plan de Entrenamiento
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Fase Inicial: Ingeniería Inversa",
+              desc: "Aprende a desarmar ejecutables, leer código ensamblador, saltarte protecciones y entender la lógica interna de cualquier software sin ver su código fuente.",
+              icon: <Terminal className="w-6 h-6 text-indigo-400" />,
+              upcoming: false
+            },
+            {
+              title: "Infraestructura HackTheBox",
+              desc: "Evolucionaremos hacia el despliegue de laboratorios privados donde aprenderás técnicas de Pentesting real, intrusión de redes, pivoteo y escalada de privilegios.",
+              icon: <Trophy className="w-6 h-6 text-purple-400" />,
+              upcoming: true
+            },
+            {
+              title: "Explotación Binaria & PWN",
+              desc: "No solo buscaremos fallos, aprenderemos a explotarlos. Corrupción de memoria, desbordamientos de pila (Buffer Overflows) y evasión de mitigaciones modernas.",
+              icon: <Shield className="w-6 h-6 text-red-400" />,
+              upcoming: true
+            }
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              className="liquid-glass rounded-2xl p-8 border border-white/5 hover:border-red-500/50 transition-colors group cursor-default flex flex-col justify-between"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15, duration: 0.5 }}
+            >
+              <div>
+                <div className="flex items-center justify-between items-start mb-6 gap-2">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
+                    {item.icon}
+                  </div>
+                  {item.upcoming && (
+                    <span className="text-[10px] md:text-xs font-medium tracking-wider uppercase bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 text-red-400 text-center">
+                      Próximamente
+                    </span>
+                  )}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {item.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+
+
+
+
       {/* SECTION 2: El Problema */}
       <section className="mt-32 max-w-4xl mx-auto text-center px-6">
+        <span className="text-red-400 text-sm font-medium mb-4 tracking-wider uppercase bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
+          Próximamente 2026
+        </span>
+
         <motion.div
+          className="mt-5"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">El Problema</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">UCSC CTF</h2>
           <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-            La UCSC no tiene presencia en ciberseguridad competitiva. No existen laboratorios, equipo CTF ni una ruta formativa sólida, dejando a los estudiantes fuera de una de las áreas más críticas del futuro.
+            Te invitamos a los eventos de ciberseguridad que se realizaran dentro de la universidad (proximamente)
           </p>
         </motion.div>
       </section>
@@ -190,7 +258,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          La Solución
+          
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
@@ -201,7 +269,7 @@ export default function Home() {
             },
             {
               title: "Competencias CTF Reales",
-              desc: "Participación activa en eventos nacionales e internacionales representando a la universidad.",
+              desc: "Participación activa en eventos de la universidad y nacionales.",
               icon: <Trophy className="w-6 h-6 text-purple-400" />
             },
             {
@@ -230,38 +298,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 4: Impacto */}
-      <section className="mt-32 max-w-6xl mx-auto px-6">
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          Impacto
-        </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { title: "Académico", desc: "Creación de un estándar de excelencia técnica y práctica." },
-            { title: "Reputacional", desc: "Posicionar a la UCSC como referente en ciberseguridad." },
-            { title: "Económico", desc: "Mejores oportunidades laborales y becas para los miembros." },
-            { title: "Estratégico", desc: "Alineación con la estrategia nacional de ciberdefensa." }
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              className="liquid-glass rounded-xl p-6 text-center"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.4 }}
-            >
-              <h3 className="text-lg font-bold mb-2 text-white/90">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
       {/* SECTION 5: Roadmap */}
       <section className="mt-32 max-w-4xl mx-auto px-6">
         <motion.h2
@@ -270,13 +306,13 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Roadmap
+          Línea de Operaciones 2026
         </motion.h2>
         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
           {[
-            { title: "Fase 1: MVP (0–4 meses)", desc: "Establecimiento del equipo core, infraestructura base y primera participación en CTF." },
-            { title: "Fase 2: Expansión (9 meses)", desc: "Apertura a nuevos estudiantes, talleres internos y alianzas con otras universidades." },
-            { title: "Fase 3: Consolidación (2 años)", desc: "Organización del primer CTF interuniversitario UCSC y reconocimiento oficial." }
+            { title: "Fase 1: Reversing Fundamentos", desc: "Análisis estático y dinámico, desensambladores, descompiladores y crackmes básicos.", upcoming: false },
+            { title: "Fase 2: HackTheBox & Maquinaria", desc: "Estrategias de reconocimiento, escaneo, explotación Web, inyecciones y escalada.", upcoming: true },
+            { title: "Fase 3: Pwn & Advanced CTF", desc: "Explotación binaria pura, bypassing de defensas y automatización de exploits en vivo.", upcoming: true }
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -290,7 +326,14 @@ export default function Home() {
                 {i + 1}
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] liquid-glass border border-white/10 rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <div className="flex items-center justify-between gap-2 mb-2 flex-wrap">
+                  <h3 className="text-xl font-bold">{item.title}</h3>
+                  {item.upcoming && (
+                    <span className="text-[10px] md:text-xs font-semibold tracking-wider uppercase bg-white/5 px-2.5 py-0.5 rounded-full border border-white/10 text-muted-foreground">
+                      Próximamente
+                    </span>
+                  )}
+                </div>
                 <p className="text-muted-foreground text-sm">{item.desc}</p>
               </div>
             </motion.div>
@@ -307,10 +350,10 @@ export default function Home() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-10 italic leading-relaxed text-white/90">
-            "Hoy la UCSC forma ingenieros. Mañana puede formar quienes protejan Chile."
+            "Enfocarnos en aprender a fondo"
           </h2>
           <a
-            href="https://forms.gle/tuFormulario"
+            href="https://forms.gle/bZseVXyHHFAwCMBH7"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-full font-medium transition-transform hover:scale-105 shadow-[0_0_40px_-10px_rgba(220,38,38,0.5)]"
