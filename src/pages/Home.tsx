@@ -180,19 +180,19 @@ const marqueeItems = [
           {[
             {
               title: "Fase Inicial: Ingeniería Inversa",
-              desc: "Aprende a desarmar ejecutables, leer código ensamblador, saltarte protecciones y entender la lógica interna de cualquier software sin ver su código fuente.",
+              desc: "",
               icon: <Terminal className="w-6 h-6 text-indigo-400" />,
               upcoming: false
             },
             {
               title: "Infraestructura HackTheBox",
-              desc: "Evolucionaremos hacia el despliegue de laboratorios privados donde aprenderás técnicas de Pentesting real, intrusión de redes, pivoteo y escalada de privilegios.",
+              desc: "",
               icon: <Trophy className="w-6 h-6 text-purple-400" />,
               upcoming: true
             },
             {
               title: "Explotación Binaria & PWN",
-              desc: "No solo buscaremos fallos, aprenderemos a explotarlos. Corrupción de memoria, desbordamientos de pila (Buffer Overflows) y evasión de mitigaciones modernas.",
+              desc: "",
               icon: <Shield className="w-6 h-6 text-red-400" />,
               upcoming: true
             }
