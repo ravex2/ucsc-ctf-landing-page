@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Terminal, Trophy, Shield } from "lucide-react";
 
+
 function MatrixRain() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -75,7 +76,7 @@ function MatrixRain() {
 }
 
 export default function Home() {
-const marqueeItems = [
+  const marqueeItems = [
     { code: "REV", name: "Ingeniería Inversa" },
     { code: "PWN", name: "Binary Exploitation" },
   ];
